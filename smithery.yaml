@@ -1,0 +1,25 @@
+# Smithery deployment configuration for Screenshot MCP Server
+# https://smithery.ai/docs/deploy
+
+build:
+  dockerfile: Dockerfile
+  dockerBuildPath: ./
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - screenshotoneApiKey
+    properties:
+      screenshotoneApiKey:
+        type: string
+        description: "ScreenshotOne API key — get one free at https://screenshotone.com"
+  commandFunction: |
+    (config) => ({
+      command: "uv",
+      args: ["run", "server.py"],
+      env: {
+        SCREENSHOTONE_API_KEY: config.screenshotoneApiKey,
+      },
+    })
