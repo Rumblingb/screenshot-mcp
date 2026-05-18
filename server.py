@@ -9,7 +9,7 @@ import os
 import base64
 import httpx
 from typing import Optional
-from mcp.server import Server, Notification
+from mcp.server.lowlevel import Server, Notification
 from mcp.server.models import InitializationOptions
 from mcp.types import Tool, TextContent, ImageContent, CallToolResult
 from pydantic import BaseModel, Field
