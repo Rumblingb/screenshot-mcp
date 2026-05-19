@@ -3,17 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Screenshot MCP — Capture Webpage Screenshots</title>
-<meta name="description" content="Capture webpage screenshots via the ScreenshotOne API. Desktop and mobile viewports, element-specific captures, and full-page screenshots — 100 free screen...">
-<meta property="og:title" content="Screenshot MCP">
-<meta property="og:description" content="Capture webpage screenshots via the ScreenshotOne API. Desktop and mobile viewports, element-specific captures, and full...">
+<title>Screenshot MCP — Capture Webpage Screenshots via AI</title>
+<meta name="description" content="Capture webpage screenshots via the ScreenshotOne API. Desktop and mobile viewports, element-specific captures, and full-page screenshots — 100 free screenshots/month.">
+<meta property="og:title" content="Screenshot MCP — Capture Webpage Screenshots via AI">
+<meta property="og:description" content="Capture webpage screenshots via the ScreenshotOne API. Desktop and mobile viewports, element-specific captures, and full-page screenshots — 100 free screenshots/month.">
 <meta property="og:url" content="https://rumblingb.github.io/screenshot-mcp/">
+<meta property="og:image" content="https://rumblingb.github.io/agentpay-highway/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rumblingb.github.io/agentpay-highway/og.png">
 <link rel="canonical" href="https://rumblingb.github.io/screenshot-mcp/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Screenshot MCP",
+  "description": "Capture webpage screenshots via the ScreenshotOne API. Desktop and mobile viewports, element-specific captures, and full-page screenshots.",
+  "url": "https://rumblingb.github.io/screenshot-mcp/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro",
+      "price": "19",
+      "priceCurrency": "USD",
+      "billingIncrement": "P1M"
+    }
+  ]
+}
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#e0e0e0;line-height:1.6}
 .container{max-width:920px;margin:0 auto;padding:2rem 1.5rem}
-.hero{text-align:center;padding:5rem 0 3rem}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;color:#888;text-decoration:none;font-size:.85rem;margin-bottom:2rem;transition:color .2s}
+.back-link:hover{color:#a78bfa}
+.hero{text-align:center;padding:4rem 0 3rem}
 .hero h1{font-size:2.8rem;font-weight:800;background:linear-gradient(135deg,#7c3aed,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem}
 .hero p{font-size:1.15rem;color:#888;max-width:680px;margin:0 auto 2rem}
 .badges{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
@@ -57,6 +89,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .usecase-box{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:2rem;margin:2rem 0}
 .usecase-box h3{color:#22d3ee;margin-bottom:.75rem}
 .usecase-box p{color:#888;font-size:.9rem}
+.usecase-box ul{margin-top:.75rem;padding-left:1.25rem}
+.usecase-box li{color:#999;font-size:.9rem;margin-bottom:.4rem}
 .usecase-box code{background:rgba(6,182,212,.1);padding:.15rem .4rem;border-radius:4px;font-size:.85rem;color:#22d3ee}
 footer{text-align:center;padding:3rem 0;color:#666;font-size:.85rem;border-top:1px solid rgba(255,255,255,.06);margin-top:3rem}
 footer a{color:#a78bfa;text-decoration:none}
@@ -67,12 +101,14 @@ footer a:hover{text-decoration:underline}
 <body>
 <div class="container">
 
+<a href="https://rumblingb.github.io/agentpay-labs-hub/" class="back-link">&#8592; Back to all products</a>
+
 <div class="hero">
 <h1>📸 Screenshot MCP</h1>
 <p>Capture webpage screenshots via the ScreenshotOne API. Desktop and mobile viewports, element-specific captures, and full-page screenshots — 100 free screenshots/month.</p>
 <div class="badges">
 <span class="badge badge-mcp">MCP Server</span>
-<span class="badge badge-free">200 Free/Day</span>
+<span class="badge badge-free">100 Free/Month</span>
 <span class="badge badge-pro">$19/mo Pro</span>
 </div>
 <div class="cta-group">
@@ -91,7 +127,7 @@ footer a:hover{text-decoration:underline}
 <div class="tool-card"><h3>screenshot_url_mobile</h3><p>Mobile viewport screenshot (390×844, iPhone 13 Pro)</p></div>
 <div class="tool-card"><h3>screenshot_element</h3><p>Capture specific page elements by CSS selector</p></div>
 <div class="tool-card"><h3>Free tier</h3><p>100 screenshots/month — no credit card required</p></div>
-<div class="tool-card"><h3>Base64 output</h3><p>Returns base64-encoded PNG for inline use</p></div>
+<div class="tool-card"><h3>Base64 output</h3><p>Returns base64-encoded PNG for inline use in agents</p></div>
 </div>
 </div>
 
@@ -103,18 +139,18 @@ footer a:hover{text-decoration:underline}
 <h3>🆓 Free</h3>
 <div class="price">$0<span>/mo</span></div>
 <ul>
-<li>200 queries per day</li>
+<li>100 screenshots/month</li>
 <li>All core tools</li>
 <li>Standard rate limits</li>
 <li>Community support</li>
 </ul>
-<a href="https://github.com/Rumblingb/screenshot-mcp" class="cta-btn secondary">Get Started</a>
+<a href="https://github.com/Rumblingb/screenshot-mcp#installation" class="cta-btn secondary">Get Started</a>
 </div>
 <div class="price-card featured">
 <h3>⭐ Pro</h3>
 <div class="price">$19<span>/mo</span></div>
 <ul>
-<li>Unlimited queries</li>
+<li>Unlimited screenshots</li>
 <li>All tools included</li>
 <li>Priority support</li>
 <li>Early feature access</li>
@@ -126,8 +162,12 @@ footer a:hover{text-decoration:underline}
 
 <div class="usecase-box">
 <h3>💡 Example Usage</h3>
-<p>Configure this MCP server in your AI client (Claude Desktop, Cursor, VS Code + Continue, etc.) and ask:</p>
-<p style="margin-top:.75rem;font-size:.9rem;color:#999"><em>Describe natural language interactions your AI assistant can use with this server.</em></p>
+<p>Configure this MCP server in Claude Desktop, Cursor, or VS Code + Continue, then ask your AI:</p>
+<ul>
+<li>"Take a screenshot of example.com on mobile"</li>
+<li>"Capture the hero section of this landing page"</li>
+<li>"Screenshot this URL in desktop and mobile viewports"</li>
+</ul>
 </div>
 
 
@@ -136,12 +176,12 @@ footer a:hover{text-decoration:underline}
 <pre><code>git clone https://github.com/Rumblingb/screenshot-mcp.git
 cd screenshot-mcp
 pip install -r requirements.txt
-python3 server.py</code></pre>
+python server.py</code></pre>
 </div>
 
 <footer>
 <p>Screenshot MCP &mdash; <a href="https://github.com/Rumblingb/screenshot-mcp">GitHub</a></p>
-<p style="margin-top:.5rem">Part of the <a href="https://rumblingb.github.io/agentpay-labs-hub/">Rumblingb MCP Ecosystem</a> — 67+ MCP servers for AI agents</p>
+<p style="margin-top:.5rem">Part of the <a href="https://rumblingb.github.io/agentpay-labs-hub/">AgentPay Labs MCP Ecosystem</a> — 67+ MCP servers for AI agents</p>
 </footer>
 
 </div>
